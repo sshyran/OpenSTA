@@ -401,7 +401,7 @@ proc check_percent { cmd_arg arg } {
 # Protected so this file can be reloaded without blowing up.
 if { ![info exists renamed_source] } {
   rename source builtin_source
-  rename unknown builtin_unknown
+  #rename unknown builtin_unknown
   set renamed_source 1
 }
 
