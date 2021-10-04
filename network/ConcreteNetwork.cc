@@ -1623,7 +1623,7 @@ void
 ConcreteInstance::deletePin(ConcretePin *pin)
 {
   ConcretePort *cport = reinterpret_cast<ConcretePort *>(pin->port());
-  pins_[cport->pinIndex()] = nullptr;
+  //  pins_[cport->pinIndex()] = nullptr;
 }
 
 void
