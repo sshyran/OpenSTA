@@ -276,7 +276,8 @@ void
 ConcreteNetwork::deleteTopInstance()
 {
   if (top_instance_) {
-    deleteInstance(top_instance_);
+  //   deleteInstance(top_instance_);
+      delete top_instance_;
     top_instance_ = nullptr;
   }
 }
@@ -1220,7 +1221,9 @@ ConcreteNetwork::deleteInstance(Instance *inst)
   InstanceChildIterator *child_iter = childIterator(inst);
   while (child_iter->hasNext()) {
     Instance *child = child_iter->next();
-    deleteInstance(child);
+    if (child) {
+        deleteInstance(child);
+    }
   }
   delete child_iter;
 
